@@ -1,1 +1,118 @@
-// Your styles go here
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+  --body-background: rgb(206, 206, 185);
+  --area-background: grey;
+  --section-background: ivory;
+  --dark-background: black;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* UTILITIES */
+body {
+  background-color: var(--body-background);
+  height: 100dvh;
+  //   border: 4px solid black;
+}
+/* CLASSES  */
+/* This is the main layout of the page on screens <= 500px */
+.wraper {
+  max-width: 1200px;
+  margin-inline: auto;
+  border: 3px solid rgb(49, 48, 48);
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(35px, auto) minmax(40px, auto) 1fr minmax(35px, auto);
+  gap: 0.5em;
+}
+.top-div {
+  grid-column: span 2;
+  background-color: var(--area-background);
+}
+.nav-div {
+  grid-column: span 2;
+  display: grid;
+  grid-auto-rows: 1.8em;
+  gap: 0.5em;
+  color: whitesmoke;
+}
+.nav-div > div,
+.main-bottom-left > div {
+  background-color: var(--dark-background);
+  border: 1px solid black;
+  color: whitesmoke;
+}
+.main {
+  border: 2px solid salmon;
+  grid-column: span 2;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5em;
+}
+.main-top {
+  grid-column: span 2;
+  background-color: var(--area-background);
+}
+.main-bottom {
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 0.5em;
+  grid-column: span 2;
+}
+.main-bottom-left,
+.main-bottom-right {
+  border: 1px solid black;
+}
+.main-bottom-right {
+  background-color: var(--area-background);
+}
+.main-bottom-left {
+  display: grid;
+  gap: 0.5em;
+}
+.main-bottom-left > div {
+  border: 1px solid rebeccapurple;
+}
+.footer {
+  grid-column: span 2;
+  background-color: var(--area-background);
+}
+/* MEDIA QUERIES FOR BIGGER SCREENS*/
+@media (500px < width <= 800px) {
+  :root {
+    --body-background: rgb(206, 206, 185);
+    --area-background: rgb(139, 94, 94);
+    --section-background: ivory;
+    --dark-background: black;
+  }
+  .nav-div {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .main-bottom-left {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (width > 800px) {
+  .nav-div {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .main {
+    grid-column: span 2;
+    display: grid;
+    // grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+  }
+  // .main-top {
+  //   grid-column: span 1;
+  // }
+}

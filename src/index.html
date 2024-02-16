@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>A03 Grid Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Project Starter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./stylesheets/main.scss">
-</head>
+  <body>
+    <!-- *********************** -->
+    <div class="wraper">
+      <div class="top-div"><p>top-div</p></div>
+      <div class="nav-div">
+        <div class="nav-1">Nav1</div>
+        <div class="nav-2">Nav2</div>
+        <div class="nav-3">Nav3</div>
+        <div class="nav-4">Nav4</div>
+        <div class="nav-5">Nav5</div>
+      </div>
+      <div class="main">
+        <div class="main-top"><p>Main-top</p></div>
+        <div class="main-bottom">
+          <div class="main-bottom-left">
+            <div><p>main-bottom-left-1</p></div>
+            <div><p>main-bottom-left-2</p></div>
+            <div><p>main-bottom-left-3</p></div>
+            <div><p>main-bottom-left-4</p></div>
+          </div>
+          <div class="main-bottom-right"><p>main-bottom-right</p></div>
+        </div>
+      </div>
 
-<body>
-  <!--  Your HTML goes here-->
-  <h1>Welcome to WEB 2620!!!!!</h1>
-<script type="module" src="./javascripts/main.js"></script>
-</body>
+      <div class="footer"><p>Footer</p></div>
+    </div>
+    <!-- *********************** -->
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
 </html>
